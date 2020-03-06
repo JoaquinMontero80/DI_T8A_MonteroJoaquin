@@ -5,11 +5,10 @@
  */
 
 import junit_maximo.MasGrande;
-
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import static org.junit.Assert.*;
 
 /**
  *
@@ -20,11 +19,11 @@ public class MasGrandeTest {
     public MasGrandeTest() {
     }
     
-    @BeforeAll
+    @BeforeClass
     public static void setUpClass() {
     }
     
-    @AfterAll
+    @AfterClass
     public static void tearDownClass() {
     }
 
@@ -34,7 +33,7 @@ public class MasGrandeTest {
     @Test
     public void testMax() 
     {
-        System.out.println("VACIO");
+        System.out.println("1. VACIO");
         int[] a = {};
         int expResult = 0;
         int resultado = MasGrande.max(a);
@@ -42,7 +41,7 @@ public class MasGrandeTest {
         
         //=================================
         
-        System.out.println("UN ELEMENTO");
+        System.out.println("2. UN ELEMENTO");
         int[] b = {5};
         expResult = 5;
         resultado = MasGrande.max(b);
@@ -50,7 +49,7 @@ public class MasGrandeTest {
         
         //================================
         
-        System.out.println("VARIOS ELEMENTOS ORDENADOS");
+        System.out.println("3. VARIOS ELEMENTOS ORDENADOS");
         int[] c = {3,5,8};
         expResult = 8;
         resultado = MasGrande.max(c);
@@ -58,7 +57,7 @@ public class MasGrandeTest {
         
         //================================
         
-        System.out.println("VARIOS ELEMENTOS DESORDENADOS");
+        System.out.println("4. VARIOS ELEMENTOS DESORDENADOS");
         int[] d = {8,53,5};
         expResult = 53;
         resultado = MasGrande.max(d);
@@ -66,7 +65,7 @@ public class MasGrandeTest {
         
         //================================
         
-        System.out.println("VARIOS ELEMENTOS Y NEGATIVOS");
+        System.out.println("5. VARIOS ELEMENTOS Y NEGATIVOS");
         int[] e = {3,-12,23,-15,8};
         expResult = 23;
         resultado = MasGrande.max(e);
@@ -74,7 +73,7 @@ public class MasGrandeTest {
         
         //================================
         
-        System.out.println("ELEMENTOS NULO");
+        System.out.println("6. ELEMENTOS NULO");
         
         try
         {
@@ -86,9 +85,9 @@ public class MasGrandeTest {
         }
         catch(NullPointerException n)
         {
-            System.out.println("Excepcion esperada.");
+            System.out.println("7. EXCEPCIÓN ESPERADA.");
         }
         
     } // Fin de metodo testMax
     
-} // Fin de clase 
+} // Fin de clase
