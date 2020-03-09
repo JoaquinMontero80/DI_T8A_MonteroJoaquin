@@ -111,7 +111,7 @@ public class Correcto
             System.out.println("Valor esperado : null");
             System.out.println("Valor obtenido : " + max6);
 
-    //        if(max6 == null)
+    //      if(max6 == null) --> NO ES VÁLIDO, HAY QUE IGUALKARLO A UN ENTERO
             Integer nulo = null;
 
             if(max6 != nulo)
